@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="transaction_form_khipu" model="ir.ui.view">
+            <field name="name">transaction.form.khipu</field>
+            <field name="model">payment.transaction</field>
+            <field name="inherit_id" ref="payment.transaction_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='acquirer_reference']" position="after">
+                  <field name="khipu_txn_type" />
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
